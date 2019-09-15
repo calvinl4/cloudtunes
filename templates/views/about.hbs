@@ -2,25 +2,65 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/normalize.css">
-        <link rel="stylesheet" href="./css/skeleton.css">
-        <script src="/js/app.js" async defer></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+    <script src="/js/app.js" async defer></script>
+    <title>About CloudTunes</title>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        {{>header}}
+    {{>header}}
+    <div class="container">
+        <div class="row" style="margin-left : 35%">
+            <div style="margin-top:10%">
+                <div class="six columns">
+                    <div style="background-color:#50B8FF; text-align:middle; vertical-align: middle;">
+                        <h3>About CloudTunes</h3>
 
-        {{>footer}}
+                    </div>
+                    <h4 style="margin-top:30px"><b>What is CloudTunes?</b></h4>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        
-    </body>
-</html> 
+    <div class="container">
+        <div class="row">
+            <h5>CloudTunes is our (Jason Lin and Calvin Lin) project for Hack the North 2019. We decided to make an app
+                that allows users to enter a city and have all the weather information for that city displayed for the
+                user.
+            </h5>
+            <h5>The app
+                also plays music/sounds that matches that weather as well. The atmosphere created by this is meant to
+                allow the
+                person to have an immersive experience while checking the weather. </h5>
+            </h5>
+            <h5>This app is our attempt to learn new
+                ways of programming
+                as we are experimenting with new languages and ideas. The method behind the app is quite simple as well.
+                Once the user has input a city, our app makes an API call to obtain all the necessary weather
+                information
+                for that specific city. The rest is just displaying it to the screen. Thank you for taking a look at our
+                project.</h5>
+
+        </div>
+        <div class="container">
+            {{>footer}}
+
+
+</body>
+
+</html>

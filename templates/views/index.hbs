@@ -15,7 +15,6 @@
     {{!-- <link rel="stylesheet" href="./css/styles.css"> --}}
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
-    <script src="/js/app.js"></script>
     <link rel="icon" type="image/png" href='img/cticon.png'>
 </head>
 
@@ -24,26 +23,31 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     {{>header}}
+    <img src="img/frontpage1.png" style="margin-bottom:0;" height='300'>
     <div class="container">
         <div class="one-half row" style="margin-left : 35%">
-            <div class="one-half column" style="margin-top: 25%">
+            <div class="one-half column" style="margin-top: 7%">
                 <h1>CloudTunes</h1>
-                <p>Enter City:</p>
+                <p>Enter Location:</p>
                 <form>
                     <div class="row">
                         <div class="six columns">
-                            <input class="u-full-width" type="text" placeholder="Toronto">
+                            <input class="u-full-width" type="text" placeholder="Location">
                         </div>
                         <div class="three columns">
                             <input class="button-primary" type="submit" value="Show Me">
                         </div>
                     </div>
                 </form>
+                
             </div>
         </div>
     </div>
+    <h4 id='message-1'> </h4>
+    <p id='message-2'></p>
 
     {{>footer}}
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
