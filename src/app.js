@@ -4,13 +4,14 @@ const hbs = require('hbs')
 const request = require('request')
 const geocode = require('./utils/geocode.js')
 const forecast = require('./utils/forecast.js')
+
 const app = express()
 const port = process.env.PORT || 3000
 
 // Define paths for express config
-const publicDirectoryPath = '/Users/calvinlin4/Documents/Node-Course/web-server/public'
-const viewsPath = '/Users/calvinlin4/Documents/Node-Course/web-server/templates/views'
-const partialsPath = '/Users/calvinlin4/Documents/Node-Course/web-server/templates/partials'
+const publicDirectoryPath = path.join(__dirname, '../public')
+const viewsPath = path.join(__dirname, '../templates/views')
+const partialsPath = path.join(__dirname, '../templates/partials')
 
 
 // Setup handlebars engine and views location
