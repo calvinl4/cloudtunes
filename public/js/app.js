@@ -14,6 +14,10 @@ const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
 
+function play(){
+    var audio = document.getElementById("audio")
+    audio.play()
+}
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -26,6 +30,7 @@ weatherForm.addEventListener('submit', (e) => {
             } else {
                 messageOne.textContent = ('Location: ' + data.location)
                 messageTwo.textContent = (data.forecast)
+
             }
         })
     })

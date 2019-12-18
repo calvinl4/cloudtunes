@@ -7,8 +7,9 @@ const forecast = require('./utils/forecast.js')
 const app = express()
 
 // Define paths for express config
-const viewsPath = path.join(__dirname, '../templates/views')
-const partialsPath = path.join(__dirname, '../templates/partials') 
+const publicDirectoryPath = '/Users/calvinlin4/Documents/Node-Course/web-server/public'
+const viewsPath = '/Users/calvinlin4/Documents/Node-Course/web-server/templates/views'
+const partialsPath = '/Users/calvinlin4/Documents/Node-Course/web-server/templates/partials'
 
 
 // Setup handlebars engine and views location
@@ -17,7 +18,7 @@ app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
 // Setup static directory to serve
-app.use(express.static('/Users/calvinlin4/Documents/Node-Course/web-server/public'))
+app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index', {
@@ -76,6 +77,20 @@ app.get('/products', (req, res) => {
     console.log(req.query.search)
     res.send({
         products: []
+    })
+})
+
+app.get('/help/*', (req, res) => {
+    res.render('my404help', {
+        title: 'Help article not found.',
+        name: 'Calvin Lin, Jason Lin'
+    })
+})
+
+app.get('*', (req, res) => {
+    res.render('my404', {
+        title: 'Page not found.',
+        name: 'Calvin Lin, Jason Lin'
     })
 })
 
